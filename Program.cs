@@ -20,8 +20,18 @@ namespace Day6
             stack.Pop();
             foreach(string items in stack)
                 Console.WriteLine(items);
-            Console.WriteLine("The Peek is " + stack.Peek()) ;
+            Console.WriteLine("The Peek is " + stack.Peek()); 
+            stack.Clear();
+            Console.WriteLine("The number of items are : " + stack.Count);
             Console.ReadKey();
+            Queue q = new Queue();
+            q.Enqueue("Shyam");
+            q.Enqueue("Sundar");
+            q.Enqueue("Sanjay");
+            Console.WriteLine("The number of items are : "+q.Count);
+            q.Dequeue();
+            foreach (string item in q)
+                Console.WriteLine(item);
         }
     }
 }
